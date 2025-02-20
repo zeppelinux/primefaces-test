@@ -1,6 +1,7 @@
 package org.primefaces.test;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 import jakarta.annotation.PostConstruct;
@@ -23,6 +24,8 @@ public class TestView implements Serializable {
     private LocalDateTime localDateTime;
     private List<TestObject> list;
 
+    private List<LocalDate> selectedMultipleDates;
+
     @PostConstruct
     public void init() {
         string = "Welcome to PrimeFaces!!!";
@@ -32,6 +35,9 @@ public class TestView implements Serializable {
                 new TestObject("The Bodyguard", "Whitney Houston", 1992),
                 new TestObject("The Dark Side of the Moon", "Pink Floyd", 1973)
         ));
+    }
+
+    public void onMultipleDatesSelected() {
     }
 
 }

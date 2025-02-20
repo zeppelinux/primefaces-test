@@ -5,7 +5,7 @@
       xmlns:h="jakarta.faces.html"
       xmlns:p="primefaces">
 
-    <h:head>
+    <h:head>java -version
         <title>PrimeFaces Test</title>
         <h:outputScript name="test.js" />
         <h:outputStylesheet name="test.css" />
@@ -14,7 +14,12 @@
 
         <h1>#{testView.string}</h1>
         <h:form id="frmTest">
-
+            <p:datePicker selectionMode="multiple" value="#{testView.selectedMultipleDates}"
+                          showIcon="true">
+                <p:ajax event="close" process="@this"
+                        listener="#{testView.onMultipleDatesSelected}"
+                        update="frmTest" resetValues="true"/>
+            </p:datePicker>
         </h:form>
 
     </h:body>
