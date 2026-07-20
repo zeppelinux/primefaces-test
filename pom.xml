@@ -11,20 +11,20 @@
         <maven.compiler.release>11</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty.port>8080</jetty.port>
-        <jetty.version>12.0.16</jetty.version>
-        <lombok.version>1.18.36</lombok.version>
+        <jetty.version>12.1.11</jetty.version>
+        <lombok.version>1.18.46</lombok.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>15.0.0</version>
+            <version>15.0.17</version>
             <classifier>jakarta</classifier>
         </dependency>
         <dependency>
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet-core</artifactId>
-            <version>6.0.1.Final</version>
+            <version>6.0.4.Final</version>
             <exclusions>
                 <exclusion>
                     <groupId>jakarta.el</groupId>
@@ -68,7 +68,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.15.0</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <annotationProcessorPaths>
@@ -83,7 +83,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.5.1</version>
                 <configuration>
                     <webResources>
                         <resource>
@@ -145,12 +145,12 @@
                 <dependency>
                     <groupId>org.apache.myfaces.core</groupId>
                     <artifactId>myfaces-api</artifactId>
-                    <version>4.1.0</version>
+                    <version>4.0.3</version>
                 </dependency>
                 <dependency>
                     <groupId>org.apache.myfaces.core</groupId>
                     <artifactId>myfaces-impl</artifactId>
-                    <version>4.1.0</version>
+                    <version>4.0.3</version>
                 </dependency>
             </dependencies>
         </profile>
@@ -163,7 +163,7 @@
                 <dependency>
                     <groupId>org.glassfish</groupId>
                     <artifactId>jakarta.faces</artifactId>
-                    <version>4.0.9</version>
+                    <version>4.0.20</version>
                 </dependency>
             </dependencies>
         </profile>
