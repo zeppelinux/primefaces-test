@@ -9,6 +9,7 @@
         <title>PrimeFaces Test</title>
         <h:outputScript name="test.js" />
         <h:outputStylesheet name="test.css" />
+        <h:outputStylesheet name="primeflex.min.css"/>
     </h:head>
     <h:body>
 
@@ -20,7 +21,23 @@
                         listener="#{testView.onMultipleDatesSelected}"
                         update="frmTest" resetValues="true"/>
             </p:datePicker>
-        </h:form>
 
+            <div class="card">
+                <h5>Dialog</h5>
+                <p:commandButton value="Show" type="button" onclick="PF('dlg').show()" icon="pi pi-external-link" />
+                <p:dialog styleClass="w-full" header="Dialog" widgetVar="dlg" modal="true" responsive="true" width="350" showEffect="fade" hideEffect="fade">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <f:facet name="footer">
+                        <p:commandButton value="Dismiss" type="button" icon="pi pi-check" styleClass="ui-button-secondary" onclick="PF('dlg').hide()" />
+                    </f:facet>
+                </p:dialog>
+            </div>
+
+        </h:form>
     </h:body>
 </html>
