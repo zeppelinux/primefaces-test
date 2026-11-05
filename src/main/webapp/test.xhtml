@@ -32,7 +32,10 @@
                             <p:graphicImage url="#{_img.smallImageUrl}" width="50" height="50" cache="true"/>
                             <button type="button"
                                     title="Delete Image"
-                                    onclick="executeDelete('#{_img.id}');"
+                                    ontouchstart="event.stopPropagation();"
+                                    ontouchend="event.stopPropagation();"
+                                    onmousedown="event.stopPropagation();"
+                                    onclick="event.stopPropagation(); executeDelete('#{_img.id}');"
                                     class="absolute bottom-0 right-1 ui-button-danger ui-button-flat p-0 ui-button ui-widget ui-state-default ui-corner-all w-5 h-5"
                                     style="z-index: 100; cursor: pointer; border: none; background: transparent; color: #ef4444;">
                                 <span class="pi pi-trash" style="font-size: 1rem;"></span>
